@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Corrado gay 2
+            Corrado lol 45234
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
