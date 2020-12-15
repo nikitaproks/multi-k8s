@@ -1,6 +1,6 @@
-docker built -t nikitaproks/multi-client:$SHA  -f ./client/Dockerfile ./client
-docker built -t nikitaproks/multi-server:$SHA  -f ./server/Dockerfile ./server
-docker built -t nikitaproks/multi-worker:$SHA  -f ./worker/Dockerfile ./worker
+docker built -t nikitaproks/multi-client:latest  -f ./client/Dockerfile ./client
+docker built -t nikitaproks/multi-server:latest   -f ./server/Dockerfile ./server
+docker built -t nikitaproks/multi-worker:latest   -f ./worker/Dockerfile ./worker
 
 #docker tag nikitaproks/multi-client:latest nikitaproks/multi-client:$SHA 
 #docker tag nikitaproks/multi-server:latest nikitaproks/multi-server:$SHA 
@@ -10,11 +10,11 @@ docker built -t nikitaproks/multi-worker:$SHA  -f ./worker/Dockerfile ./worker
 #docker push nikitaproks/multi-server:latest
 #docker push nikitaproks/multi-worker:latest
 
-docker push nikitaproks/multi-client:$SHA
-docker push nikitaproks/multi-server:$SHA
-docker push nikitaproks/multi-worker:$SHA
+docker push nikitaproks/multi-client:latest 
+docker push nikitaproks/multi-server:latest 
+docker push nikitaproks/multi-worker:latest 
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=nikitaproks/multi-server:$SHA
-kubectl set image deployments/client-deployment client=nikitaproks/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker=nikitaproks/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=nikitaproks/multi-server:latest 
+kubectl set image deployments/client-deployment client=nikitaproks/multi-client:latest 
+kubectl set image deployments/worker-deployment worker=nikitaproks/multi-worker:latest 
