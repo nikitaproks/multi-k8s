@@ -1,4 +1,4 @@
-languege: node_js
+sudo: required
 services:
   - docker
 env:
