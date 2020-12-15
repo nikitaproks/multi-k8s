@@ -1,6 +1,6 @@
-docker built --tag nikitaproks/multi-client:latest --tag nikitaproks/multi-client:$SHA -f ./client/Dockerfile ./client
-docker built --tag nikitaproks/multi-server:latest --tag nikitaproks/multi-server:$SHA -f ./server/Dockerfile ./server
-docker built --tag nikitaproks/multi-worker:latest --tag nikitaproks/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t nikitaproks/multi-client:latest -t nikitaproks/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t nikitaproks/multi-server:latest -t nikitaproks/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t nikitaproks/multi-worker:latest -t nikitaproks/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push nikitaproks/multi-client:latest
 docker push nikitaproks/multi-server:latest
